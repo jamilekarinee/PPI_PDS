@@ -1,0 +1,51 @@
+body{
+    font-family: Arial, Helvetica, sans-serif
+} 
+:root{
+    --azul_escuro : #0570ff;
+    --altura_cabecalho: 70px;
+}
+
+
+/* Cabeçalho */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 48
+  }
+  
+
+  .cabecalho {
+      display: flex;
+      flex-direction: row;
+      justify-content:  space-between;
+      background-color: var(--azul_escuro);
+      align-items: center;
+      height: var(--altura_cabecalho);
+      padding: 35px 40px; 
+  }
+  
+  .cabecalho__detalhes{
+      display: flex;
+      align-items: center;
+  }
+  .nome_site_aprenda{
+      font-family: 'Courier Prime', Arial, Helvetica, sans-serif; 
+      font-size: 19px; 
+      color: white;
+  }
+  .nome_site_ts{
+      font-family: 'Lexend', Arial, Helvetica, sans-serif; 
+      font-size: 20px; 
+      margin-left: 5px;
+      color: white;
+      margin-bottom: 5px;
+  } 
+
+/* Fim cabeçalho*/
+option{
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: medium;
+}
