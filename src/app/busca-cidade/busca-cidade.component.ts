@@ -10,7 +10,7 @@ import { CidadeService } from '../model/cidade.service';
 })
 export class BuscaCidadeComponent {
   formBusca: FormGroup
-  deputado: Cidade[] | undefined 
+  cidade: Cidade[] | undefined 
   constructor(private fb: FormBuilder, 
               private fs: CidadeService
   ) {
@@ -20,13 +20,13 @@ export class BuscaCidadeComponent {
               ]
     })
 
-    this.deputado = undefined
+    this.cidade = undefined
   }
-  buscar() {
+  buscar() { 
     const nome = this.formBusca.value.nome
     this.fs.buscarCidade(nome).subscribe(
       res => {
-        this.deputado = res.dados 
+        this.cidade = res.dados 
       }
     )
   }
