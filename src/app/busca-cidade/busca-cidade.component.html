@@ -1,0 +1,23 @@
+<h1>Buscar Cidade</h1>
+<form [formGroup]="formBusca">
+       <label for="nome" class="form-label">
+              Nome 
+       </label>
+       <input class="form-control" type="text" name="nome" id="nome" formControlName="nome">
+       <input class="btn btn-info mt-3" type="button" value="Buscar" [disabled]="formBusca.invalid" (click)="buscar()">
+</form>
+
+<div *ngIf="deputado != undefined" class="card" style="width:15rem; height: auto;">
+       <tr *ngFor="let deputado of deputado">
+              <div class="card-body">
+                     <img [src]="deputado.urlFoto" class="card-img-top" alt="Poster">
+                     <h4 class="card-title">{{cidade.nome}}</h4>
+                     <ul class="card-text">
+                            <li>ID: {{cidade.id}}</li>
+                            <li>Nome: {{cidade.nome}}</li>
+                            <li>Partido: {{cidade.siglaPartido}}</li>
+                            <li>UF: {{cidade.siglaUf}}</li>
+                     </ul>
+              </div> 
+       </tr>
+</div>
