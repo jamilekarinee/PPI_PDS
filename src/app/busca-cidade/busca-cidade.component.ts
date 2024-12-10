@@ -19,14 +19,13 @@ export class BuscaCidadeComponent {
                     Validators.minLength(2)]
               ]
     })
-
+    this.buscar()
     this.cidade = undefined
   }
   buscar() { 
-    const nome = this.formBusca.value.nome
-    this.fs.buscarCidade(nome).subscribe(
+    this.fs.buscarCidade().subscribe(
       res => {
-        this.cidade = res.dados 
+        this.cidade = res 
       }
     )
   }

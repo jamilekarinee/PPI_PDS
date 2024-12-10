@@ -35,6 +35,10 @@
         </div>
     </header>
     <form>
+
+
+
+
         <h2 class="titulo">Denúncias</h2>
         <h3 class="informe">Informe o problema urbano</h3>
         <select>
@@ -48,14 +52,8 @@
         <h3 class="informe">Informe a localização</h3>
         <div class="forms-select">
             <select>
-                <option>CIDADE</option>
+                <option *ngFor="let c of cidades">{{c.nome}}</option>
             </select>
-            <select>
-                <option>BAIRRO</option>
-            </select>
-            <select>
-                <option>RUA</option>
-            </select>    
         </div>
     
         <div class="detalhamento_problema">
@@ -67,6 +65,10 @@
             <h3>Adicionar imagens</h3>
             <input type="file"> <br> <br>    
         </div>
+
+
+
+        
     
         <input type="button" value="Enviar" class="botao_enviar">
     </form>

@@ -6,14 +6,14 @@ import { Cidade } from './cidade';
 
 @Injectable({
   providedIn: 'root'
-})
+}) 
 export class CidadeService {
   private API='http://servicodados.ibge.gov.br/api/v1/localidades/estados/'
 
   constructor(private http: HttpClient) {    
   }
 
-  buscarCidade(uf_estado: string): Observable<any> {
-    return this.http.get<any>(`${this.API}:idEstado${uf_estado}/municipios`)
+  buscarCidade(): Observable<any> {
+    return this.http.get<any>(`${this.API}/24/municipios`)
   }
 }
